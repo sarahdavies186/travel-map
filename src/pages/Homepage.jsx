@@ -1,9 +1,12 @@
+import PageNav from "../components/PageNav";
+
 function Homepage() {
   return (
     <div>
-      Travel Map
+      <PageNav />
+      <h1>Travel Map</h1>
     </div>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;
