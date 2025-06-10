@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
 import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import { useEffect, useState } from "react";
-import { useCities } from "../contexts/CitiesContext";
+import { useCities } from "../contexts/useCities";
 import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "./Button";
 import { useUrlPosition } from "../hooks/useUrlPosition";
@@ -30,9 +30,11 @@ function Map() {
 
   return (
     <div className={styles.mapContainer}>
-      {!geolocationPosition && <Button type="position" onClick={getPosition}>
-        {isLoadingPosition ? "Loading..." : "Use your position"}
-      </Button>}
+      {!geolocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "Use your position"}
+        </Button>
+      )}
       <MapContainer center={mapPosition} zoom={6} scrollWheelZoom={true} className={styles.map}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png" />
         {cities.map((city) => (
