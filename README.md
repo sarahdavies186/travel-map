@@ -39,7 +39,7 @@ cd travel-map
 npm install
 ```
 
-4.Open two terminal windows or tabs:
+4. Open two terminal windows or tabs:
 
 In the first terminal, start the front-end development server:
 
