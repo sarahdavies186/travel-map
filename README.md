@@ -7,7 +7,6 @@ This is a React-based travel map application built with Vite, allowing users to 
 - Add and remove cities on the map
 - Interactive map with zoom and pan
 - Global state management with Context API and useReducer
-- Responsive design for desktop and mobile
 
 ## Technologies Used
 - React (functional components, hooks)
